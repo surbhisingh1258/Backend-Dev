@@ -55,23 +55,38 @@
 
 
 //First Non-Repeating Character
-let str = "swiss";
+// let str = "swiss";
+// let result = "";
+
+// for (let i = 0; i < str.length; i++) {
+//     let count = 0;   
+
+//     for (let j = 0; j < str.length; j++) {
+//         if (str[i] === str[j]) {
+//             count++;
+//         }
+//     }
+
+//     if (count === 1) {
+//         result = str[i];
+//         break;
+//     }
+// }
+
+// console.log(result); 
+
+
+//Convert to Title Case
+let str = "java is awesome";
+let words = str.split(" ");
 let result = "";
 
-for (let i = 0; i < str.length; i++) {
-    let count = 0;   
-
-    for (let j = 0; j < str.length; j++) {
-        if (str[i] === str[j]) {
-            count++;
-        }
-    }
-
-    if (count === 1) {
-        result = str[i];
-        break;
-    }
+for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let titleWord = word[0].toUpperCase() + word.slice(1);
+    result += titleWord + " ";
 }
 
-console.log(result); 
+console.log(result.trim());
+
 
