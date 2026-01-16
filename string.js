@@ -14,17 +14,40 @@
 // }
 
 //Run-Length Encoding 
-let str = "aaabbc";
-let result = "";
-let count = 1;
+// let str = "aaabbc";
+// let result = "";
+// let count = 1;
 
-for (let i = 1; i <= str.length; i++) {
-    if (str[i] === str[i - 1]) {
-        count++;
-    } else {
-        result += str[i - 1] + count;
-        count = 1;
+// for (let i = 1; i <= str.length; i++) {
+//     if (str[i] === str[i - 1]) {
+//         count++;
+//     } else {
+//         result += str[i - 1] + count;
+//         count = 1;
+//     }
+// }
+
+// console.log(result); 
+
+
+
+//Count Vowels and Consonants
+let str = "Hello World";
+let vowels = 0;
+let consonants = 0;
+
+let lowerStr = str.toLowerCase();
+
+for (let i = 0; i < lowerStr.length; i++) {
+    let ch = lowerStr[i];
+    
+    if (ch >= 'a' && ch <= 'z') {          // Check if it's a letter
+        if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u') {
+            vowels++;
+        } else {
+            consonants++;
+        }
     }
 }
 
-console.log(result); 
+console.log("Vowels:", vowels, "Consonants:", consonants);
