@@ -103,3 +103,71 @@ db.students.deleteOne({emial:"rahul@gmail.com"});
   acknowledged: true,
   deletedCount: 0
 }
+
+______________________________________________________________________________________________________________________________________
+
+use firstdb
+switched to db firstdb
+db.books.insertMany([
+  {
+    title: "Think and Grow Rich",
+    author: "Napoleon Hill",
+    available: true
+  },
+  {
+    title: "The Power of Habit",
+    author: "Charles Duhigg",
+    available: true
+  },
+  {
+    title: "Deep Work",
+    author: "Cal Newport",
+    available: false
+  },
+  {
+    title: "Ikigai",
+    author: "Hector Garcia",
+    available: true
+  },
+  {
+    title: "Start With Why",
+    author: "Simon Sinek",
+    available: false
+  },
+  {
+    title: "Zero to One",
+    author: "Peter Thiel",
+    available: true
+  },
+  {
+    title: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    available: true
+  },
+  {
+    title: "Can't Hurt Me",
+    author: "David Goggins",
+    available: false
+  }
+]);
+db.books.find({ author: "Napoleon Hill" });
+{
+  _id: ObjectId('69c517f23c4dddc1d06985f5'),
+  title: 'Think and Grow Rich',
+  author: 'Napoleon Hill',
+  available: true
+}
+db.books.updateOne(
+  { title: "Ikigai" },
+  { $set: { available: false } }
+);
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+
