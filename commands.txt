@@ -1,0 +1,98 @@
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ touch basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ echo "Hello world" > basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ echo "second line" >> basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ cat basicCommands.txt
+Hello world
+second line
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ pwd
+/c/Users/Surbhi Singh/OneDrive/Desktop/Bridgelabz/Unix-commands
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ ls
+basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ ls -l
+total 1
+-rw-r--r-- 1 Surbhi Singh 197121 24 Jan  9 22:58 basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ ls -a
+./  ../  basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ ls -lh
+total 1.0K
+-rw-r--r-- 1 Surbhi Singh 197121 24 Jan  9 22:58 basicCommands.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ mkdir folder1
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ mkdir folder2
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ rmdir folder1/folder4/folder5
+rmdir: failed to remove 'folder1/folder4/folder5': No such file or directory
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ cd folder1
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ mkdir -p folder4/folder5
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ touch text1.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ echo "hello" > text1.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ cat text1.txt
+hello
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ cp folder1/text1.txt folder2/
+cp: cannot stat 'folder1/text1.txt': No such file or directory
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ ls
+folder4/  text1.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder1
+$ cd -
+/c/Users/Surbhi Singh/OneDrive/Desktop/Bridgelabz/Unix-commands
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ mkdir folder3
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ cd folder3
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder3
+$ cd -
+/c/Users/Surbhi Singh/OneDrive/Desktop/Bridgelabz/Unix-commands
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ cp folder1/text1.txt folder3/
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands
+$ cd folder3
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder3
+$ ls
+text1.txt
+
+Surbhi Singh@surbhi_ASUS MINGW64 ~/OneDrive/Desktop/Bridgelabz/Unix-commands/folder3
+$ cat text1.txt
+hello
