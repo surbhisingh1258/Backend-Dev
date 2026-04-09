@@ -1,0 +1,29 @@
+table user{
+  id integer
+  name string
+  password string
+}
+
+table products{
+  user_id integer
+  id integer
+  productname string
+  price integer
+}
+
+table session{
+  user_id integer
+  id integer
+  expire timestamp
+  active boolean
+}
+
+table review{
+  user_id integer
+  id integer
+  comment string
+}
+
+Ref:user.id < review.user_id
+Ref:user.id < products.user_id
+Ref:user.id < session.user_id
